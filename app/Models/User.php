@@ -51,6 +51,8 @@ class User extends Authenticatable  implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
+//        dd($this->panel, $panel);
+        //filament.admin.pages.dashboard
         if($this->panel === PanelTypeEnum::ADMIN){
             return true;
         }
@@ -62,8 +64,8 @@ class User extends Authenticatable  implements FilamentUser
         return false;
     }
 
-    public function customer(): BelongsTo
+    public function customer(): HasOne
     {
-        return $this->belongsTo(Customer::class);
+        return $this->hasOne(Customer::class);
     }
 }
