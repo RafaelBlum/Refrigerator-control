@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Mail\NewCustomerMail;
 use App\Models\Customer;
+use http\Client\Curl\User;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use App\Enums\PanelTypeEnum;
@@ -20,16 +21,23 @@ class CustomerObserver
      */
     public function created(Customer $customer): void
     {
-        $password = Str::random(8);
+        $secret = Str::random(8);
 
-        $customer->user()->create([
+        $user = \App\Models\User::create([
             'name' => $customer->name,
             'panel' => PanelTypeEnum::APP,
             'email' => $customer->email,
-            'password' => bcrypt($password),
+            'password' => bcrypt($secret),
         ]);
 
-        Mail::to($customer->email)->send(new NewCustomerMail($customer, $password));
+        $customer->user_id = $user->id;
+
+        /**
+         * pt-br: Salva sem chamar eventos
+        */
+        $customer->saveQuietly();
+
+        Mail::to($customer->email)->send(new NewCustomerMail($customer, $secret));
     }
 
     /**

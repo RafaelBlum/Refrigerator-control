@@ -30,22 +30,33 @@ class NewCustomerMail extends Mailable implements ShouldQueue
 
     /**
      * Get the message envelope.
+     * pt-br: Retorna de quem está enviando [e-mail and name application laravel].
      */
     public function envelope(): Envelope
     {
         return new Envelope(
+<<<<<<< HEAD
             from: new Address()
             subject: 'New Customer Mail',
+=======
+            from: new Address(config('mail.from.address'), config('app.name')),
+            subject: 'Seu acesso ao Refrigerator Control',
+>>>>>>> f2a1500612d180403a5e99d7cfd4a08f2d854e67
         );
     }
 
     /**
      * Get the message content definition.
+     * pt-br: View de MAIL | array [name application, email and secret]
      */
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.new-customer',
+            with: [
+                'customer'  => $this->customer,
+                'secret'    => $this->secret,
+            ]
         );
     }
 
