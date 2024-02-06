@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')
-                ->index()->constrained()->cascadeOnDelete();
+                ->index()
+                ->nullable()
+                ->constrained()
+                ->cascadeOnDelete();
             $table->string('name');
             $table->string('document');
             $table->date('birthdate');

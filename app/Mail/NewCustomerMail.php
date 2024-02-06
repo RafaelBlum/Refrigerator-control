@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use Faker\Provider\Address;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -29,22 +30,28 @@ class NewCustomerMail extends Mailable implements ShouldQueue
 
     /**
      * Get the message envelope.
+     * pt-br: Retorna de quem está enviando [e-mail and name application laravel].
      */
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Addr
-            subject: 'New Customer Mail',
+            from: new Address(config('mail.from.address'), config('app.name')),
+            subject: 'Seu acesso ao Refrigerator Control',
         );
     }
 
     /**
      * Get the message content definition.
+     * pt-br: View de MAIL | array [name application, email and secret]
      */
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.new-customer',
+            with: [
+                'customer'  => $this->customer,
+                'secret'    => $this->secret,
+            ]
         );
     }
 
