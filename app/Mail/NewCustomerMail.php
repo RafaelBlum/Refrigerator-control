@@ -9,6 +9,10 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use function Illuminate\Mail\Mailables\from;
+use function Illuminate\Mail\Mailables\subject;
+use App\Models\Customer;
+use Illuminate\Mail\Mailables\Address;
 
 /**
  * Add ShouldQueue para deixar em fila
@@ -22,7 +26,7 @@ class NewCustomerMail extends Mailable implements ShouldQueue
      */
     public function __construct(
         public readonly Customer $customer,
-        public readonly String $secret,
+        public readonly string $secret,
     )
     {
         //
@@ -35,13 +39,9 @@ class NewCustomerMail extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-<<<<<<< HEAD
-            from: new Address()
-            subject: 'New Customer Mail',
-=======
             from: new Address(config('mail.from.address'), config('app.name')),
             subject: 'Seu acesso ao Refrigerator Control',
->>>>>>> f2a1500612d180403a5e99d7cfd4a08f2d854e67
+
         );
     }
 

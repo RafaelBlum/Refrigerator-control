@@ -37,10 +37,13 @@ class CustomerResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('user_id')
-                    ->label('Usuário')
-                    ->relationship('user', 'name')->preload()
-                    ->multiple(),
+//                Select::make('user_id')
+//                    ->label('Usuário')
+//                    ->relationship('user', 'name')->preload()
+//                    ->multiple(),
+
+                TextInput::make('name')->label('name')
+                    ->required(),
 
                 TextInput::make('email')->label('E-mail')
                     ->required(),
@@ -49,20 +52,20 @@ class CustomerResource extends Resource
                     ->mask('99.999.999.9-99')
                     ->required(),
 
-                Select::make('panel')
-                    ->hintIcon('heroicon-m-question-mark-circle', tooltip: 'Selecione o nível de acesso!')
-                    ->hintColor('primary')
-                    ->options([
-                        'admin'       => 'Administrador',
-                        'app'         => 'Usuário',
-                    ])->required(),
+//                Select::make('panel')
+//                    ->hintIcon('heroicon-m-question-mark-circle', tooltip: 'Selecione o nível de acesso!')
+//                    ->hintColor('primary')
+//                    ->options([
+//                        'admin'       => 'Administrador',
+//                        'app'         => 'Usuário',
+//                    ])->required(),
 
                 DatePicker::make('birthdate')
                     ->displayFormat(function () {return 'd/m/Y';})
                     ->prefixIcon('heroicon-o-calendar-days')
                     ->prefixIconColor('success'),
 
-                TextInput::make('password')->label('password')
+                TextInput::make('mobile')->label('celular')
                     ->required(),
             ]);
     }
