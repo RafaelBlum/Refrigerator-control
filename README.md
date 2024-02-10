@@ -1,3 +1,5 @@
+### VIDEO 03 - 51:20
+https://www.youtube.com/watch?v=bCv9hTlipuA&list=PL9zLINrtn0_pNgp-PjrvQXi7fctF-idNC&index=3&t=1201s&ab_channel=TioJobs
 
 ### PENDENCIAS 
 User APP está acessando area ADMIN, ajustar, pois não pode.
@@ -38,4 +40,6 @@ SSL
 - `Ajustado os metodos` construct, envelope e content, dados de envio.
 - Criado a `view do E-mail`.
 - Ajustado os dados de e-mail do `.ENV`.
+- Customização da pagina de registrar user [Filament authenticate](https://filamentphp.com/docs/3.x/panels/users#customizing-the-authentication-features)
+        - path: App\Filament\Pages\Auth
 
