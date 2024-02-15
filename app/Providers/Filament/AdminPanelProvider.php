@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\Auth\LoginAuth;
 use App\Filament\Pages\Auth\RefrigerateRegister;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -18,6 +19,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Illuminate\View\View;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -28,6 +30,10 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('REFRIGERATOR CONTROL')
+            ->darkModeBrandLogo(fn(): View => view('filament.partials.logo.brand-logo-dark'))
+            ->brandLogo(fn(): View => view('filament.partials.logo.brand-logo'))
+            ->favicon(asset('images/brands/icon-340.png'))
             ->registration(RefrigerateRegister::class)
             ->colors([
                 'primary' => Color::Amber,
