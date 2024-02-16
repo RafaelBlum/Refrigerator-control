@@ -1,4 +1,4 @@
-@if(Route::current()->getName() === 'filament.admin.auth.login' || Route::current()->getName() === 'filament.admin.auth.register')
+@if(Route::current()->getName() === 'filament.admin.auth.login' || Route::current()->getName() === 'filament.app.auth.register' || Route::current()->getName() === 'filament.app.auth.login')
     <img src="{{asset('images/brands/logo-h-white-720.png')}}"
          alt="{{config('app.name')}}"
          title="{{config('app.name')}}"
