@@ -2,17 +2,14 @@
 
 namespace App\Mail;
 
-use Faker\Provider\Address;
+use App\Models\Customer;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use function Illuminate\Mail\Mailables\from;
-use function Illuminate\Mail\Mailables\subject;
-use App\Models\Customer;
-use Illuminate\Mail\Mailables\Address;
 
 /**
  * Add ShouldQueue para deixar em fila

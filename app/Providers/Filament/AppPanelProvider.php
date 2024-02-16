@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\Auth\RefrigerateRegister;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -26,6 +27,9 @@ class AppPanelProvider extends PanelProvider
             ->id('app')
             ->path('app')
             ->login()
+            ->registration(RefrigerateRegister::class)
+            ->brandName(config('app.name'))
+            ->favicon(asset('images/brands/icon-340.png'))
             ->colors([
                 'primary' => Color::Amber,
             ])

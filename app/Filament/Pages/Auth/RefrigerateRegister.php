@@ -4,8 +4,9 @@
 namespace App\Filament\Pages\Auth;
 
 
+use App\Models\Customer;
 use DanHarrin\LivewireRateLimiting\Exceptions\TooManyRequestsException;
-use Filament\Events\Auth\Registered;
+use DomainException;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\TextInput;
@@ -46,6 +47,9 @@ class RefrigerateRegister extends Register
 
                 DatePicker::make('birthdate')
                     ->label('Data de Nascimento')
+                    ->displayFormat(function () {
+                        return 'd/m/Y';
+                    })
                     ->required(),
             ]);
     }
@@ -57,8 +61,8 @@ class RefrigerateRegister extends Register
         try {
             $this->rateLimit(2);
 
-            if(!$this->checkIfCustomerCanRegister()){
-                throw new \DomainException('Infelizmente você não pode se registrar no app ' . config('app.name'));
+            if (!$this->checkIfCustomerCanRegister()) {
+                throw new DomainException('Infelizmente você não pode se registrar no app ' . config('app.name'));
             }
 
         } catch (TooManyRequestsException $exception) {
@@ -75,7 +79,7 @@ class RefrigerateRegister extends Register
                 ->send();
 
             return null;
-        } catch (\DomainException $domainException){
+        } catch (DomainException $domainException) {
             Notification::make()
                 ->title("Erro ao tentar realizar o cadastro")
                 ->body($domainException->getMessage())
@@ -85,19 +89,20 @@ class RefrigerateRegister extends Register
             return null;
         }
 
-        $this->data = $this->form->getState();
 
-        $user = $this->getUserModel()::create($this->data);
 
-        event(new Registered($user));
+        Customer::create($this->data);
 
-        $this->sendEmailVerificationNotification($user);
 
-        Filament::auth()->login($user);
+        Notification::make()
+            ->title("Seu cadastro foi realizado com sucesso!")
+            ->body("Enviamos um email para você em {$this->data['email']}, com seus dados de acesso")
+            ->success()
+            ->send();
 
-        session()->regenerate();
+        $this->reset();
 
-        return app(RegistrationResponse::class);
+        return null;
     }
 
     private function checkIfCustomerCanRegister(): bool
