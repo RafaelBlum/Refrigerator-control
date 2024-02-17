@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\QrCodeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return "Bem-vindo!";
-});
+    return to_route('filament.admin.auth.login');
+})->name('frontend.home');
+
+
+Route::get('/qr-code', QrCodeController::class)->name('frontend.qrcode');
+
 
 Route::fallback(function (){
    return redirect('/app');
