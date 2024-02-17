@@ -46,4 +46,7 @@ SSL
 - Criação de logotipo e atualização de logo nas views login e register.
 - Criação da view home `/` redirecionando para admin/login.
 - Instalação da Lib SimpleSoftwareIO `composer require simplesoftwareio/simple-qrcode "~4"` | doc: `https://harrk.dev/qr-code-generator-in-laravel-10-tutorial/`
-- 
+- Criação do controller qrcode e rota para a view criada qrcode.
+- Criação da model Product e ProductTransaction e magrations.
+- criação da factorie de product.
+- criação do Enum dos tipos de transações.

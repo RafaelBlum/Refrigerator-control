@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return to_route('filament.admin.auth.login');
+    $panelID = Filament\Facades\Filament::getPanel()->getId();
+
+    return to_route("filament.{$panelID}.pages.dashboard");
 })->name('frontend.home');
 
 
