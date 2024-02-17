@@ -42,4 +42,8 @@ SSL
 - Ajustado os dados de e-mail do `.ENV`.
 - Customização da pagina de registrar user [Filament authenticate](https://filamentphp.com/docs/3.x/panels/users#customizing-the-authentication-features)
         - path: App\Filament\Pages\Auth
-
+        - Sobreescrita `Override` do metodo `register`.
+- Criação de logotipo e atualização de logo nas views login e register.
+- Criação da view home `/` redirecionando para admin/login.
+- Instalação da Lib SimpleSoftwareIO `composer require simplesoftwareio/simple-qrcode "~4"` | doc: `https://harrk.dev/qr-code-generator-in-laravel-10-tutorial/`
+- 
