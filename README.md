@@ -61,3 +61,8 @@ SSL
 - add metodos de atualização de movimentações e estoque de produtos na pasta em `app\Filament\Resources\ProductTransactionResource\Pages\CreateProductTransaction`
 - add type font em AdminPanel
 - Add class format money PtbrMoney -> app/Filament/Forms/Components/PtbrMoney e add in resources form e table. (PR de user do projeto)
+- Adicionando processo de pedido dos clientes e pagamento:
+    - links: https://filamentphp.com/docs/3.x/forms/fields/repeater, 
+    - 
+    - 
+    - 
