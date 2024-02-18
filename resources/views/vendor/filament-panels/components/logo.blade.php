@@ -4,7 +4,6 @@
          title="{{config('app.name')}}"
          width="310"
          class="mb-2"
-         style="filter: drop-shadow(rgb(10,20,10) 1px 2px 1px)"
     >
 @else
     <img src="{{asset('images/brands/logo-v-white-720.png')}}"
@@ -12,6 +11,5 @@
          title="{{config('app.name')}}"
          width="185"
          class="mb-2"
-         style="filter: drop-shadow(rgb(10,20,10) 1px 2px 1px)"
     >
  @endif

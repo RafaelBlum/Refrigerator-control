@@ -50,3 +50,8 @@ SSL
 - Criação da model Product e ProductTransaction e magrations.
 - criação da factorie de product.
 - criação do Enum dos tipos de transações.
+- Ajustando campos de form e table das resources de Product e ProductTransaction
+- add storage link `php artisan storage:link`
+- Criação da relação entre Product e ProductTransaction `HasMany/BelongsTo`
+- Ajusta da Enum ProducTransactionTypeEnum com getLabels() para campo de option da movimentação.
+- Criação da Hook do Filament para ajustar as movimentações e estoque do produto. [link doc](https://filamentphp.com/docs/3.x/panels/resources/creating-records#customizing-data-before-saving)
