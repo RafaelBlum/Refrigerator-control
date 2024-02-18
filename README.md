@@ -55,3 +55,4 @@ SSL
 - Criação da relação entre Product e ProductTransaction `HasMany/BelongsTo`
 - Ajusta da Enum ProducTransactionTypeEnum com getLabels() para campo de option da movimentação.
 - Criação da Hook do Filament para ajustar as movimentações e estoque do produto. [link doc](https://filamentphp.com/docs/3.x/panels/resources/creating-records#customizing-data-before-saving)
+- add metodos de atualização de movimentações e estoque de produtos na pasta em `app\Filament\Resources\ProductTransactionResource\Pages\CreateProductTransaction`

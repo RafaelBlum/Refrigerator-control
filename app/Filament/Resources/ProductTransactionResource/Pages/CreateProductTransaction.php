@@ -28,17 +28,10 @@ class CreateProductTransaction extends CreateRecord
 
         if ($this->data['type'] === ProductTransactionTypeEnum::SALE->value){
 
-            if($this->data['quantity'] > 1){
-                Notification::make()
-                    ->title("O produto não possui esta quantidade para venda!")
-                    ->body("O produto não possui esta quantidade para venda!")
-                    ->success()
-                    ->send();
-            }
-
             Product::query()
                 ->where('id', $this->data['product_id'])
                 ->decrement('in_stock', (int)$this->data['quantity']);
+
             $this->updateDescription();
             return;
         }
@@ -73,5 +66,23 @@ class CreateProductTransaction extends CreateRecord
         }
 
         return 'inventário';
+    }
+
+    protected function beforeCreate(): Notification
+    {
+//        $prd = Product::all()->find($this->data['product_id']);
+
+//        if((int)$this->data['quantity'] > $prd->in_stock){
+//
+//            return Notification::make()
+//                ->title("O produto não possui esta quantidade para venda!")
+//                ->body("O produto não possui esta quantidade para venda!")
+//                ->success()
+//                ->send();
+//
+//        }
+
+        // Runs before the form fields are saved to the database.
+//        dd($this->data, $this->getRecord(), $prd->in_stock, $this->data['product_id']);
     }
 }
