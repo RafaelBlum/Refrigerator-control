@@ -24,7 +24,7 @@ SSL
 ### Desenvolvimento
 ##### PENDENCIAS
 - Add condição na movimentação `sale` caso estoque 0 e user queira vender.
-
+- Verificar format money Filament example.
 
 ##### CONCLUÍDAS
 - Configurações em `config/app.php`.
@@ -59,3 +59,5 @@ SSL
 - Ajusta da Enum ProducTransactionTypeEnum com getLabels() para campo de option da movimentação.
 - Criação da Hook do Filament para ajustar as movimentações e estoque do produto. [link doc](https://filamentphp.com/docs/3.x/panels/resources/creating-records#customizing-data-before-saving)
 - add metodos de atualização de movimentações e estoque de produtos na pasta em `app\Filament\Resources\ProductTransactionResource\Pages\CreateProductTransaction`
+- add type font em AdminPanel
+- Add class format money PtbrMoney -> app/Filament/Forms/Components/PtbrMoney e add in resources form e table. (PR de user do projeto)
