@@ -22,8 +22,11 @@ smtp.hostinger.com
 SSL
 
 ### Desenvolvimento
+##### PENDENCIAS
+- Add condição na movimentação `sale` caso estoque 0 e user queira vender.
 
-#### Database
+
+##### CONCLUÍDAS
 - Configurações em `config/app.php`.
 - Criado Customer `php artisan make:model Customer -mfs`.
 - Ajustes dados do User e Customer e relações `HasOne/BelognsTo`.

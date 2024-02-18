@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Forms\Components\PtbrMoney;
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
@@ -32,15 +33,13 @@ class ProductResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                Forms\Components\TextInput::make('cost_price')
-                    ->label('Preço de custo')
-                    ->required()
-                    ->numeric(),
+                PtbrMoney::make('cost_price')
+                    ->label('Preço de Custo')
+                    ->required(),
 
-                Forms\Components\TextInput::make('sale_price')
-                    ->label('Preço de venda')
-                    ->required()
-                    ->numeric(),
+                PtbrMoney::make('sale_price')
+                    ->label('Preço de Venda')
+                    ->required(),
 
                 Forms\Components\TextInput::make('in_stock')
                     ->label('Estoque atual')
@@ -81,11 +80,11 @@ class ProductResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('cost_price')
                     ->label('Preço de custo')
-                    ->numeric()
+                    ->formatStateUsing(fn ($state) => number_format($state, 2, ',', '.'))
                     ->sortable(),
                 Tables\Columns\TextColumn::make('sale_price')
                     ->label('Preço de venda')
-                    ->numeric()
+                    ->formatStateUsing(fn ($state) => number_format($state, 2, ',', '.'))
                     ->sortable(),
                 Tables\Columns\TextColumn::make('in_stock')
                     ->label('Estoque atual')
