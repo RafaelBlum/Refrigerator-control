@@ -6,6 +6,7 @@ use App\Enums\ProductTransactionTypeEnum;
 use App\Filament\Resources\ProductTransactionResource\Pages;
 use App\Models\ProductTransaction;
 use Filament\Forms;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -15,9 +16,10 @@ class ProductTransactionResource extends Resource
 {
     protected static ?string $model = ProductTransaction::class;
 
-    protected static ?string $navigationGroup = "Produtos e movimentações";
+    protected static ?string $navigationGroup = "Logística";
     protected static ?string $activeNavigationIcon = 'heroicon-o-shopping-cart';
 
+    protected static ?string $pluralModelLabel = "Movimentações";
     protected static ?string $modelLabel = "Movimentação";
 
     protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
@@ -60,6 +62,7 @@ class ProductTransactionResource extends Resource
 
                 Tables\Columns\TextColumn::make('description')
                     ->label('Descrição')
+                    ->limit(50)
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('type')
@@ -82,16 +85,19 @@ class ProductTransactionResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-        //
-    ])
-        ->actions([
-            Tables\Actions\EditAction::make(),
-        ])
-        ->bulkActions([
-            Tables\Actions\BulkActionGroup::make([
-                Tables\Actions\DeleteBulkAction::make(),
-            ]),
-        ]);
+                SelectFilter::make('type')
+                    ->label('Movimentação')
+                    ->options(ProductTransactionTypeEnum::class)
+                    ->native(false),
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
+            ]);
     }
 
     public static function getRelations(): array

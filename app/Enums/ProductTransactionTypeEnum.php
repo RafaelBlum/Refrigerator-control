@@ -6,16 +6,26 @@ namespace App\Enums;
 
 enum ProductTransactionTypeEnum: string
 {
-    case BUY = 'buy';
-    case SALE = 'sale';
-    case INVENTORY = 'inventory';
+        case BUY = 'buy';
+        case SALE = 'sale';
+        case INVENTORY = 'inventory';
 
-        public function getLabels(): string
+            public function getLabel(): ?string
         {
             return match ($this) {
-                self::BUY => 'buy',
-                self::SALE => 'sale',
-                self::INVENTORY => 'inventory',
-            };
-        }
+            self::BUY => 'Compra',
+                    self::SALE => 'Venda',
+                    self::INVENTORY => 'Inventário',
+                };
+            }
+
+
+            public function getColor(): string | array | null
+            {
+                return match ($this) {
+                self::BUY => 'danger',
+                    self::SALE => 'success',
+                    self::INVENTORY => 'warning',
+                };
+            }
 }

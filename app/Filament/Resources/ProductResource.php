@@ -16,7 +16,7 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
 
-    protected static ?string $navigationGroup = "Produtos e estoque";
+    protected static ?string $navigationGroup = "Logística";
     protected static ?string $activeNavigationIcon = 'heroicon-o-shopping-cart';
 
     protected static ?string $pluralModelLabel = "Produtos";
@@ -128,5 +128,10 @@ class ProductResource extends Resource
             'create' => Pages\CreateProduct::route('/create'),
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }
