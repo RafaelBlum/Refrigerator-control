@@ -153,7 +153,6 @@ class OrderResource extends Resource
                 ->required(),
         ])
         ->createOptionAction(function (Action $action) {
-            dump($action);
             return $action
                 ->modalHeading('Novo cliente')
                 ->modalSubmitActionLabel('Cadastrar cliente')

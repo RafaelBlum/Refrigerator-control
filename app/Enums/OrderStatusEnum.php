@@ -5,7 +5,7 @@ namespace App\Enums;
 use Filament\Support\Contracts\HasLabel;
 use Filament\Support\Contracts\HasColor;
 
-enum OrderStatusEnum: string
+enum OrderStatusEnum: string implements HasLabel, HasColor
 {
     case PENDING = 'PENDING';
     case PAID = 'PAID';
@@ -13,9 +13,9 @@ enum OrderStatusEnum: string
 
 
     public function getLabel(): ?string
-{
-    return match ($this) {
-    self::PENDING => 'Pendente',
+    {
+        return match ($this) {
+            self::PENDING => 'Pendente',
             self::PAID => 'Paga',
             self::FAILED => 'Falhou',
         };
@@ -25,7 +25,7 @@ enum OrderStatusEnum: string
     public function getColor(): string | array | null
     {
         return match ($this) {
-        self::PENDING => 'warning',
+            self::PENDING => 'warning',
             self::PAID => 'success',
             self::FAILED => 'danger',
         };

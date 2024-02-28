@@ -46,6 +46,7 @@
     - Add component filament `wizard` [REFERÊNCIA *6]
 - Adicionando Profile user [REFERÊNCIA *8-9-10]
     - `php artisan make:filament-page Auth/EditProfile`
+- Add integração com feature de pagemento ASAAS
 
 - Customize the navbar [REFERÊNCIA *7]
     - 
