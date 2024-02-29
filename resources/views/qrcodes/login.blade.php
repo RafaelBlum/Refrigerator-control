@@ -44,12 +44,12 @@
                 <div class="lg:mb-0 lg:max-w-lg lg:pr-5 ml-6">
                     <div class="max-w-xl mb-6">
                         <h2 class="text-left text-xl sm:mt-0 mt-6 font-semibold tracking-tight sm:text-2xl sm:leading-none max-w-lg mb-6">
-                            {{config('app.name')}}
+                            <img src="{{asset('images/brands/logo-v-white-1024.png')}}" class="h-100" alt="{{config('app.name')}}" />
                         </h2>
                         <div class="text-left text-base md:text-lg">
                             <p>Lorem Ipsum is so cool and awesome to act and so cool to think. And very awesome to eat and talk.</p>
                             <div class="text-sky-600 mt-4">
-                                <a href="#" class="bg-neutral-200 text-lg px-4 py-1.5 rounded-md">Acesse agora!</a>
+                                <a href="{{route('filament.app.auth.login')}}" class="bg-neutral-200 text-lg px-4 py-1.5 rounded-md">Acesse agora!</a>
                             </div>
                         </div>
                     </div>

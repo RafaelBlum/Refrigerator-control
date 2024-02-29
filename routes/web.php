@@ -37,6 +37,12 @@ Route::get('/play', function (){
 //
 //    dd($orders);
 
+//    TESTE: API ASAAS
+    $customers = (new App\Services\AsaasPhp\Customer\CustomerList)->handle();
+    dd($customers);
+
+
+
 });
 
 Route::get('/', function () {

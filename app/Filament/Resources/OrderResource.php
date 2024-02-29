@@ -18,6 +18,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -31,7 +32,6 @@ class OrderResource extends Resource
 
     protected static ?string $activeNavigationIcon = 'heroicon-o-shopping-cart';
 
-    protected static ?string $pluralModelLabel = "Vendas";
     protected static ?string $modelLabel = "Venda";
 
     protected static ?string $navigationIcon = 'heroicon-o-banknotes';
@@ -120,6 +120,16 @@ class OrderResource extends Resource
                                         $set('customer_name', $customer->name);
                                         $set('customer_email', $customer->email);
                                         $set('customer_birthdate', $customer->birthdate->format('d/m/Y'));
+                                    }
+
+                                    if ($customer->birthdate->age < 18) {
+                                        Notification::make()
+                                            ->danger()
+                                            ->title('Pedidos só podem ser realizados para clientes maiores de 18 anos.')
+                                            ->duration(8000)
+                                            ->send();
+
+                                        $set('customer_id', null);
                                     }
                                 })
         ->searchable()

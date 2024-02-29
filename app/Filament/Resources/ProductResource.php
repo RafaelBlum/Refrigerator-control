@@ -19,7 +19,6 @@ class ProductResource extends Resource
     protected static ?string $navigationGroup = "Logística";
     protected static ?string $activeNavigationIcon = 'heroicon-o-shopping-cart';
 
-    protected static ?string $pluralModelLabel = "Produtos";
     protected static ?string $modelLabel = "Produto";
 
     protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
