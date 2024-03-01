@@ -17,34 +17,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/play', function (){
-//    //OneToOne
-//    $user = User::find(22);
-//    $UserCustomer = User::find(22)->customer;
-//    $customer = Customer::find(1);
-//
-//    //HasMany
-//    $transactions = Product::find(2)->transactions;
-//    $transaction = \App\Models\ProductTransaction::find(8);
-//    dd("Usuário : " . $user->id, "Meu cliente : " . $UserCustomer->id, $customer);
-//    for ($i=0; $i< $transactions->count(); $i++)
-//    {
-//        echo $transactions[$i]->description . "<br/>";
-//    }
-//
-//    $orders = Customer::find(24)->orders;
-//
-//    dd($orders);
-
-//    TESTE: API ASAAS
-    $customers = (new App\Services\AsaasPhp\Customer\CustomerList)->handle();
-    dd($customers);
-
-
-
-});
-
 Route::get('/', function () {
     $panelID = Filament\Facades\Filament::getPanel()->getId();
 

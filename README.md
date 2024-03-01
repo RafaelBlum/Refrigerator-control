@@ -46,9 +46,13 @@
     - Add component filament `wizard` [REFERÊNCIA *6]
 - Adicionando Profile user [REFERÊNCIA *8-9-10]
     - `php artisan make:filament-page Auth/EditProfile`
-- Add integração com feature de pagemento ASAAS
-
 - Customize the navbar [REFERÊNCIA *7]
+- Add integração com feature de pagemento ASAAS
+    - Criação de conta no ASAAS API [REFERÊNCIA *11 - 13]
+    - Criação da conta de teste SENDBOX API [REFERÊNCIA *12]
+    - Criação da classe de config [config\asaas.php]
+    - criação do diretório SERVICES [app\Services] e arquivos de integração
+
     - 
 
 ##### REFERÊNCIAS
@@ -62,8 +66,9 @@
 - [*8](https://filamentphp.com/docs/3.x/panels/pages)
 - [*9](https://filamentphp.com/docs/3.x/panels/users#customizing-the-authentication-features)
 - [*10](https://www.youtube.com/watch?v=heu_ZLx7Q34&list=PL9zLINrtn0_pNgp-PjrvQXi7fctF-idNC&index=18&t=2s&pp=gAQBiAQB)
-- []()
-- []()
+- [*11 Conta ASAAS - producão](https://www.asaas.com/)
+- [*12 Conta ASAAS - sendbox](https://sandbox.asaas.com/)
+- [*13 Documentação ASAAS](https://docs.asaas.com/reference/comece-por-aqui)
 - []()
 - []()
 - []()
