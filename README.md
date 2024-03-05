@@ -10,7 +10,7 @@
 
 <p align="center">
 	<img src="https://img.shields.io/badge/version project-1.0-brightgreen" alt="version project">
-    <img src="https://img.shields.io/badge/Php-8.3.3-informational" alt="stack php">
+    <img src="https://img.shields.io/badge/Php-8.2-informational" alt="stack php">
     <img src="https://img.shields.io/badge/Laravel-10.46-informational&color=brightgreen" alt="stack laravel">
     <img src="https://img.shields.io/badge/Filament-3.2-informational" alt="stack Filament">
     <img src="https://img.shields.io/badge/TailwindCss-3.1-informational" alt="stack Tailwind">
@@ -20,7 +20,7 @@
 </p>
 
 <h4 align="center"> 
-	🚧  Projeto 🚀 em construção...  🚧
+	🚧  Projeto 🚀 de teste e aprendizado  🚧
 </h4>
 
 <br>
@@ -113,19 +113,4 @@
 
 
 ### CONSTRIBUIÇÕES
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/fabianosfbr">
-        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/4691302?v=4" width="100px;" alt=""/>
-    <br /><sub><b>Fabiano Fernandes</b></sub></a></td>
-    <td align="center"><a href="https://github.com/RafaelBlum">
-        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/41844692?v=4" width="100px;" alt=""/>
-    <br /><sub><b>Rafael Blum</b></sub></a></td>   
-    <td align="center"><a href="https://github.com/wesleysouza-dev">
-        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52400075?v=4" width="100px;" alt=""/>
-    <br /><sub><b>Wesley</b></sub></a></td>   
-    <td align="center"><a href="https://github.com/Deathpk">
-        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/40901963?v=4" width="100px;" alt=""/>
-    <br /><sub><b>Michel Versiani</b></sub></a></td>
-  </tr>
-</table>
+
