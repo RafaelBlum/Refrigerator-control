@@ -84,6 +84,13 @@
     - 
 
 ##### REFERÊNCIAS
+
+### Features
+
+- [x] Cadastro de usuário
+- [x] Cadastro de cliente
+- [ ] Cadastro de produtos
+
 - [*1](https://laravel.com/docs/10.x/eloquent#observers)
 - [*2](https://filamentphp.com/docs/3.x/panels/users#customizing-the-authentication-features)
 - [*3](https://filamentphp.com/docs/3.x/panels/resources/creating-records#customizing-data-before-saving)
