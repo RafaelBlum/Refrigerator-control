@@ -1,3 +1,26 @@
+<p align="center">
+	<a href="#"  target="_blank" title="Sistema de gestão de freezers">
+		<img src="/public/images/brands/logo-v-1024.png" alt="Sistema de gestão de freezers" width="340px">
+	</a>
+</p>
+
+<br>
+
+<p align="center">:rocket: Revolucionando a forma como você compra bebidas :sparkles: <a href="https://github.com/icarojobs/freezer-control">Freezer Control</a></p>
+
+<p align="center">
+	<img src="https://img.shields.io/badge/version project-1.0-brightgreen" alt="version project">
+    <img src="https://img.shields.io/badge/Php-8.3.3-informational" alt="stack php">
+    <img src="https://img.shields.io/badge/Laravel-10.46-informational&color=brightgreen" alt="stack laravel">
+    <img src="https://img.shields.io/badge/Filament-3.2-informational" alt="stack Filament">
+    <img src="https://img.shields.io/badge/TailwindCss-3.1-informational" alt="stack Tailwind">
+	<a href="https://opensource.org/licenses/GPL-3.0">
+		<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GPLv3 License">
+	</a>
+</p>
+
+<br>
+
 ##### PENDENCIAS
 - User APP está acessando area ADMIN, ajustar, pois não pode.
 - Add condição na movimentação `sale` caso estoque 0 e user queira vender.
