@@ -19,9 +19,13 @@
 	</a>
 </p>
 
+<h4 align="center"> 
+	🚧  Projeto 🚀 em construção...  🚧
+</h4>
+
 <br>
 
-##### PENDENCIAS
+##### REPOSITORIO DE TESTE
 - User APP está acessando area ADMIN, ajustar, pois não pode.
 - Add condição na movimentação `sale` caso estoque 0 e user queira vender.
 - Verificar format money Filament example.
@@ -100,16 +104,21 @@
 - []()
 - [widget botões nos paineis emcima da listagem, como nos artigos app corporatix](https://filamentphp.com/docs/3.x/panels/resources/widgets#creating-a-resource-widget)
 
+
+### CONSTRIBUIÇÕES
 <table>
   <tr>
-    <td align="center"><a href="https://rocketseat.com.br">
-    <img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/4669899" width="100px;" alt=""/>
-    <br /><sub><b>Cleiton Souza</b></sub></a></td>
-    <td align="center"><a href="https://rocketseat.com.br">
-    <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/861751" width="100px;" alt=""/>
-    <br /><sub><b>Robson Marques</b></sub></a></td>
-    <td align="center"><a href="https://rocketseat.com.br">
-    <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/16831337" width="100px;" alt=""/>
-    <br /><sub><b>Claudio Orlandi</b></sub></a></td>
+    <td align="center"><a href="https://github.com/fabianosfbr">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/4691302?v=4" width="100px;" alt=""/>
+    <br /><sub><b>Fabiano Fernandes</b></sub></a></td>
+    <td align="center"><a href="https://github.com/RafaelBlum">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/41844692?v=4" width="100px;" alt=""/>
+    <br /><sub><b>Rafael Blum</b></sub></a></td>   
+    <td align="center"><a href="https://github.com/wesleysouza-dev">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52400075?v=4" width="100px;" alt=""/>
+    <br /><sub><b>Wesley</b></sub></a></td>   
+    <td align="center"><a href="https://github.com/Deathpk">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/40901963?v=4" width="100px;" alt=""/>
+    <br /><sub><b>Michel Versiani</b></sub></a></td>
   </tr>
 </table>
