@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="#"  target="_blank" title="Sistema de gestão de freezers">
-		<img src="/public/images/brands/logo-v-1024.png" alt="Sistema de gestão de freezers" width="340px">
+		<img src="/public/images/brands/logo-v-1024.png" alt="Sistema de gestão de freezers" width="440px">
 	</a>
 </p>
 
