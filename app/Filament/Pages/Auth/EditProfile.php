@@ -2,10 +2,12 @@
 
 namespace App\Filament\Pages\Auth;
 
-use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Component;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
+use App\Enums\PanelTypeEnum;
 use Filament\Pages\Auth\EditProfile as BaseEditProfile;
 
 class EditProfile extends BaseEditProfile

@@ -46,6 +46,7 @@
     - Add component filament `wizard` [REFERÊNCIA *6]
 - Adicionando Profile user [REFERÊNCIA *8-9-10]
     - `php artisan make:filament-page Auth/EditProfile`
+    -
 - Customize the navbar [REFERÊNCIA *7]
 - Add integração com feature de pagemento ASAAS
     - Criação de conta no ASAAS API [REFERÊNCIA *11 - 13]
@@ -75,3 +76,17 @@
 - []()
 - []()
 - [widget botões nos paineis emcima da listagem, como nos artigos app corporatix](https://filamentphp.com/docs/3.x/panels/resources/widgets#creating-a-resource-widget)
+
+<table>
+  <tr>
+    <td align="center"><a href="https://rocketseat.com.br">
+    <img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/4669899" width="100px;" alt=""/>
+    <br /><sub><b>Cleiton Souza</b></sub></a></td>
+    <td align="center"><a href="https://rocketseat.com.br">
+    <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/861751" width="100px;" alt=""/>
+    <br /><sub><b>Robson Marques</b></sub></a></td>
+    <td align="center"><a href="https://rocketseat.com.br">
+    <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/16831337" width="100px;" alt=""/>
+    <br /><sub><b>Claudio Orlandi</b></sub></a></td>
+  </tr>
+</table>

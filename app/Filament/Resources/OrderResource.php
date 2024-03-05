@@ -55,18 +55,22 @@ class OrderResource extends Resource
                     })
                     ->numeric()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('total')
                     ->numeric()
                     ->money('BRL')
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Data da compra')
                     ->dateTime('d/m/Y H:i')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: false),
+
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()

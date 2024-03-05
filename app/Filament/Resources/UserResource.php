@@ -72,7 +72,8 @@ class UserResource extends Resource
                     ->searchable(),
 
                 TextColumn::make('panel')
-                    ->searchable()->badge(),
+                    ->searchable()
+                    ->badge(),
             ])
             ->filters([
                 //
