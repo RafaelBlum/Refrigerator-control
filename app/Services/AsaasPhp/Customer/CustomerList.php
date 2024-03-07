@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Services\AsaasPhp\Customer;
 
 use App\Services\AsaasPhp\Concerns\AsaasClient;
@@ -12,8 +14,6 @@ class CustomerList implements AsaasPaymentInterface
 
     public function handle(): array
     {
-
-//        dd($this);
         try {
             return Http::withHeader('access_token', $this->token)
                 ->get("{$this->url}/customers")
@@ -23,5 +23,4 @@ class CustomerList implements AsaasPaymentInterface
             return ['error' => $exception->getMessage()];
         }
     }
-
 }
